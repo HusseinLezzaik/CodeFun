@@ -5,7 +5,7 @@ def binarySearch(array, target):
     leftIdx = 0
     rightIdx = len(array) - 1
     while leftIdx <= rightIdx:
-        middleIdx = rightIdx - leftIdx // 2
+        middleIdx = rightIdx + leftIdx // 2
         potentialMatch = array[middleIdx]
         if target == potentialMatch:
             return middleIdx
