@@ -1,2 +1,1 @@
-# LeetCode-Python-Solutions
-A few code solutions to some popular leetcode questions
+Coding puzzles I enjoyed solving
