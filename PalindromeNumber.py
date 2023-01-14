@@ -15,7 +15,7 @@ class Solution:
             return True
         return False
         
-# 2nd Solution | O(logn) time | O(1) space
+# 2nd Solution | O(logn) time | O(1) space -- logn_10 because we're dividing input by 10 each iteration
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         if x < 0:
