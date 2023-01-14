@@ -13,7 +13,7 @@ class BinaryTree:
 def swapLeftAndRight(tree):
     tree.left, tree.right = tree.right, tree.left
 
- 
+
 # 1st Solution | O(n) time | O(n) space | Iterative
 def invertBinaryTree(tree):
     queue = [tree]
@@ -24,7 +24,7 @@ def invertBinaryTree(tree):
       swapLeftAndRight(current)
       queue.append(current.left)
       queue.append(current.right)
- 
+
 # 2nd Solution | O(n) time | O(d) space | Recursive
 def invertBinaryTree(tree):
     if tree is None:
