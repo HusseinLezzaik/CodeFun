@@ -14,4 +14,4 @@ def removeDuplicatesFromLinkedList(linkedList):
         currentNode.next = nextDistinctNode
         currentNode = nextDistinctNode
 
-    return currentNode
+    return linkedList
