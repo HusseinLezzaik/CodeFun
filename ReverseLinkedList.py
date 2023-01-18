@@ -1,6 +1,8 @@
 ```
 Reverse Linked List
 
+LeetCode: https://leetcode.com/problems/reverse-linked-list/description/ 
+
 ```
 
 class LinkedList:
@@ -8,12 +10,27 @@ class LinkedList:
         self.value = value
         self.next = None
 
-# O(n) time | O(1) space - n is depth of Linked List
-def reverseLinkedList(head):
-    previousNode, currentNode = None, head
-    while currentNode is not None:
-        nextNode = currentNode.next
-        currentNode.next = previousNode
-        previousNode = currentNode
-        currentNode = nextNode
-    return previousNode
+# Iterative | O(n) time | O(1) space - n is depth of Linked List
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if head is None:
+            return head
+        
+        prev = None
+        while head != None:
+            next_node = head.next
+            head.next = prev
+            prev = head
+            head = next_node
+
+        return prev
+
+# Recursive | O(n) time | O(n) space (max depth of recursive stack)
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head or not head.next:
+            return head
+        reversed_head = self.reverseList(head.next)
+        head.next.next = head
+        head.next = None
+        return reversed_head
