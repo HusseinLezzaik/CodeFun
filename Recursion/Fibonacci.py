@@ -1,8 +1,4 @@
-```
-Nth Fibonacci 
-
-https://leetcode.com/problems/fibonacci-number/
-```
+# Nth Fibonacci Number: https://leetcode.com/problems/fibonacci-number/
 
 # Solution 1 | O(2^n) time | O(n) space
 def getNthFib(n):

@@ -1,3 +1,5 @@
+# Is Subsequence: https://leetcode.com/problems/is-subsequence/
+
 # Solution 1 | O(n) time | O(1) space
 def isValidSubsequence(array, sequence):
     arrIdx = 0
@@ -18,3 +20,12 @@ def isValidSubsequence(array, sequence):
         if sequence[seqIdx] == value:
             seqIdx += 1
     return seqIdx == len(sequence)
+
+
+s = "abc"
+t = "ahbgdc"
+print(isValidSubsequence(s, t))  # Expected output: True
+
+s = "axc"
+t = "ahbgdc"
+print(isValidSubsequence(s, t))  # Expected output: False

@@ -1,6 +1,5 @@
-```
-Write python function to test if someone won in the board game Connect4
-```
+# Write python function to test if someone won in the board game Connect4
+
 
 # O(n^2) time | O(1) space
 def check_winner(board):
