@@ -32,3 +32,28 @@ def invertBinaryTree(tree):
     swapLeftAndRight(tree)
     invertBinaryTree(tree.left)
     invertBinaryTree(tree.right)
+
+
+# Test case 1
+tree1 = BinaryTree(1)
+tree1.left = BinaryTree(2)
+tree1.right = BinaryTree(3)
+tree1.left.left = BinaryTree(4)
+tree1.left.right = BinaryTree(5)
+tree1.right.left = BinaryTree(6)
+tree1.right.right = BinaryTree(7)
+tree1.left.left.left = BinaryTree(8)
+tree1.left.left.right = BinaryTree(9)
+tree1.left.right.left = BinaryTree(10)
+
+invertBinaryTree(tree1)
+print(tree1.value)
+print(tree1.left.value)
+print(tree1.right.value)
+print(tree1.left.left.value)
+print(tree1.left.right.value)
+print(tree1.right.left.value)
+print(tree1.right.right.value)
+print(tree1.left.left.left.value)
+print(tree1.left.left.right.value)
+print(tree1.left.right.left.value)
