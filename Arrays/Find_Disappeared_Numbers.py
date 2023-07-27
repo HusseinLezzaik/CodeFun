@@ -20,3 +20,15 @@ def find_disappeared_numbers(nums):
         nums[index] = - abs(nums[index])
     
     return [i + 1 for i, num in enumerate(nums) if num > 0]
+
+# Test 1: Normal case
+test1 = find_disappeared_numbers([4, 3, 2, 7, 8, 2, 3, 1])
+print(test1) # Expect: [5, 6] because 5 and 6 are not present in the list
+
+# Test 2: No numbers are missing
+test2 = find_disappeared_numbers([1, 2, 3, 4])
+print(test2) # Expect: [] because all numbers from 1 to 4 are present
+
+# Test 3: All numbers are missing
+test3 = find_disappeared_numbers([2, 2, 2, 2])
+print(test3) # Expect: [1, 3, 4] because 1, 3, 4 are not present in the list

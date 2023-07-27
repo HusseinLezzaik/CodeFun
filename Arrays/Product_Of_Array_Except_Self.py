@@ -1,5 +1,6 @@
 # Problem: Product of Array Except Self: https://leetcode.com/problems/product-of-array-except-self/
 
+# O(n) time | O(n) space
 def product_except_self(nums):
     n = len(nums)
     

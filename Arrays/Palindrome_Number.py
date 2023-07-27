@@ -39,3 +39,30 @@ def isPalindrome(self, x: int) -> bool:
     # For example when the input is 12321, at the end of the while loop we get x = 12, revertedNumber = 123,
     # since the middle digit doesn't matter in palidrome(it will always equal to itself), we can simply get rid of it.
     return x == revertedNumber or x == revertedNumber//10
+
+# Test 1: Normal case, number is a palindrome
+num1 = 121
+palindrome1 = isPalindrome(num1)
+print(f"The number {num1} is a palindrome: {palindrome1}. Expected: True")
+
+# Test 2: Normal case, number is not a palindrome
+num2 = 123
+palindrome2 = isPalindrome(num2)
+print(f"The number {num2} is a palindrome: {palindrome2}. Expected: False")
+
+# Test 3: Negative number, should return False
+num3 = -121
+palindrome3 = isPalindrome(num3)
+print(f"The number {num3} is a palindrome: {palindrome3}. Expected: False")
+
+# Test 4: Number is a single digit, should return True
+num4 = 0
+palindrome4 = isPalindrome(num4)
+print(f"The number {num4} is a palindrome: {palindrome4}. Expected: True")
+
+# Test 5: Number with an ending zero, should return False
+num5 = 10
+palindrome5 = isPalindrome(num5)
+print(f"The number {num5} is a palindrome: {palindrome5}. Expected: False")
+
+(palindrome1, palindrome2, palindrome3, palindrome4, palindrome5)

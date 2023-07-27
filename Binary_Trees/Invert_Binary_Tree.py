@@ -1,9 +1,8 @@
-```
+"""
 Invert Binary Tree 
 
 LeetCode: https://leetcode.com/problems/invert-binary-tree/
-```
-
+"""
 class BinaryTree:
     def __init__(self, value):
         self.value = value

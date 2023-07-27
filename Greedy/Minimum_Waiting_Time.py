@@ -1,8 +1,6 @@
-```
-Minimum Waiting Time 
-
-Greedy Algorithm
-```
+"""
+Minimum Waiting Time | Greedy Algorithm
+"""
 
 # O(nlogn) time | O(1) space
 def minimumWaitingTime(queries):

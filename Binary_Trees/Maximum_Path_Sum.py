@@ -12,32 +12,40 @@ However, for a balanced binary tree, the height of the tree is log(N), so the sp
 """
 
 # O(N) time | O(logN) space - where N is the number of nodes in the binary tree
-class Solution:
-    def maxPathSum(self, root):
-        self.max_sum = float('-inf')
-        self._maxPathSum(root)
-        return self.max_sum
+# First, let's remove the class method format and convert the function to a normal Python function
 
-    def _maxPathSum(self, node):
+def maxPathSum(root):
+    max_sum = float('-inf')
+
+    def _maxPathSum(node):
+        nonlocal max_sum
         if not node:
             return 0
 
-        left_gain = max(self._maxPathSum(node.left), 0)
-        right_gain = max(self._maxPathSum(node.right), 0)
+        left_gain = max(_maxPathSum(node.left), 0)
+        right_gain = max(_maxPathSum(node.right), 0)
         
         price_newpath = node.val + left_gain + right_gain
 
-        self.max_sum = max(self.max_sum, price_newpath)
+        max_sum = max(max_sum, price_newpath)
 
         return node.val + max(left_gain, right_gain)
-    
-# Create the binary tree
+
+    _maxPathSum(root)
+    return max_sum
+
+# Now let's construct a binary tree and test the function
 root = TreeNode(1)
 root.left = TreeNode(2)
 root.right = TreeNode(3)
-root.left.left = TreeNode(4)
-root.left.right = TreeNode(5)
+# For this tree, the maximum path sum is 6 (2 -> 1 -> 3)
+print(maxPathSum(root))  # Expect: 6
 
-# Test the maxPathSum function
-sol = Solution()
-print("Maximum path sum:", sol.maxPathSum(root))  # Expected: 15
+root = TreeNode(-10)
+root.left = TreeNode(9)
+root.right = TreeNode(20)
+root.right.left = TreeNode(15)
+root.right.right = TreeNode(7)
+# For this tree, the maximum path sum is 42 (15 -> 20 -> 7)
+print(maxPathSum(root))  # Expect: 42
+

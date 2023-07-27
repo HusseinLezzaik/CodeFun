@@ -1,37 +1,55 @@
 """
-Lowest Common Ancestor in a Binary Tree:
+Lowest Common Ancestor in a Binary Tree: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
 
 This problem involves finding the lowest common ancestor (LCA) of two given nodes in the tree. It can be solved using recursion or parent pointers.
 """
 
-# O(N) time | O(N) space
-class Solution:
-    def __init__(self):
-        self.ans = None
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
-    def lowestCommonAncestor(self, root, p, q):
-        def recurse_tree(current_node):
-            if not current_node:
-                return False
-            
-            left = recurse_tree(current_node.left)
-            right = recurse_tree(current_node.right)
-            
-            mid = current_node == p or current_node == q
-            
-            if mid + left + right >= 2:
-                self.ans = current_node
+# O(n) time | O(n) space
+def lowestCommonAncestor(root, p, q):
+    ans = None
 
-            return mid or left or right
+    def recurse_tree(current_node):
+        nonlocal ans
+        if not current_node:
+            return False
 
-        recurse_tree(root)
-        return self.ans
+        left = recurse_tree(current_node.left)
+        right = recurse_tree(current_node.right)
 
-# Test the lowestCommonAncestor function
-sol = Solution()
-lca = sol.lowestCommonAncestor(root, root.left.right, root)  # p = 5, q = 1
-print("Lowest Common Ancestor of 5 and 1:", lca.val)  # Expected: 1
+        mid = current_node == p or current_node == q
 
-sol = Solution()
-lca = sol.lowestCommonAncestor(root, root.left.right, root.left.left)  # p = 5, q = 4
-print("Lowest Common Ancestor of 5 and 4:", lca.val)  # Expected: 2
+        if mid + left + right >= 2:
+            ans = current_node
+
+        return mid or left or right
+
+    recurse_tree(root)
+    return ans
+
+# Let's construct a binary tree and test the function
+root = TreeNode(3)
+root.left = TreeNode(5)
+root.right = TreeNode(1)
+root.left.left = TreeNode(6)
+root.left.right = TreeNode(2)
+root.right.left = TreeNode(0)
+root.right.right = TreeNode(8)
+
+# In this tree, the lowest common ancestor of nodes with values 5 and 1 is the root node with value 3.
+node1 = root.left  # Node with value 5
+node2 = root.right  # Node with value 1
+lca = lowestCommonAncestor(root, node1, node2)
+print(lca.val if lca else None)  # Expect: 3
+
+# In this tree, the lowest common ancestor of nodes with values 6 and 2 is the node with value 5.
+node1 = root.left.left  # Node with value 6
+node2 = root.left.right  # Node with value 2
+lca = lowestCommonAncestor(root, node1, node2)
+print(lca.val if lca else None)  # Expect: 5
+
