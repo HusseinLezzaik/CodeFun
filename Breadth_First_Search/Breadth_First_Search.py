@@ -1,21 +1,10 @@
-class Node:
-    def __init__(self, name):
-        self.children = []
-        self.name = name
+# Breadth First Search
 
-    def addChild(self, name):
-        self.children.append(Node(name))
-        return self
+class Graph:
+    def __init__(self):
+        self.graph = {}
 
-    def breadthFirstSearch(self, array):
-        queue = [self]
-        while len(queue) > 0:
-            current = queue.pop(0)
-            array.append(current.name)
-            for child in current.children:
-                queue.append(child)
-        return array
-    
+# O(V+E) time | O(V) space - where V is the number of vertices and E is the number of edges in the input graph
 from collections import deque
 
 def bfs(graph, root):

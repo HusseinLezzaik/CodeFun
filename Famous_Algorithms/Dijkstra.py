@@ -14,6 +14,19 @@ This can be improved to O(E+VlogV) using a Fibonacci heap, but such an implement
 
 
 """
+# Each node in the graph is represented as a dictionary where the keys are the neighbors of the node and the values are the edge weights between the node and its neighbors.
+class Graph:
+    def __init__(self):
+        self.graph = {}
+
+    def add_edge(self, node1, node2, weight):
+        if node1 not in self.graph:
+            self.graph[node1] = {}
+        if node2 not in self.graph:
+            self.graph[node2] = {}
+        self.graph[node1][node2] = weight
+        self.graph[node2][node1] = weight
+
 
 import heapq
 
