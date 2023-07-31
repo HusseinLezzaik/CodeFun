@@ -338,6 +338,8 @@ for idx, duration in enumerate(queries):
     print(idx, duration)   
 for _ in range(10):
     print("Hello") 
+for x,y in zip(list1, list2):
+    print(x,y)
 
 # Python Truthiness
 if not matrix:
