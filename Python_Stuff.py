@@ -123,6 +123,11 @@ print(f"Hello, {name}!") # You can put any Python expression inside the curly br
 num_str = num_str[::-1] # Reverse a string
 str = "abc"
 unicode = ord(str[0]) # Get the unicode of the first character
+print(ord('a'))  # Output: 97
+print(chr(97))  # Output: 'a'
+print(ord('z')) # Output: 122
+print(ord('A')) # Output: 65
+print(ord('Z')) # Output: 90
 newstring = ''.join(reversed(str))  # Reverse a string
 newstring = ''.join(sorted(str))  # Sort a string
 newstring = ''.join(sorted(str, reverse=True))  # Sort a string in descending order
