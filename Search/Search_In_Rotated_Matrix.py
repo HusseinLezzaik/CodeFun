@@ -2,7 +2,6 @@
 
 """
 The time complexity is O(logn), because we're using a binary search which halves the search space at every step.
-
 The space complexity is O(1), because we're using a constant amount of space to store the indices.
 """
 

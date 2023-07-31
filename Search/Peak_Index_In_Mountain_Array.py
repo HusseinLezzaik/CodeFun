@@ -1,5 +1,6 @@
 # Peak Index In Mountain Array: https://leetcode.com/problems/peak-index-in-a-mountain-array/
 
+# O(logN) time, O(1) space
 def findPeakElement(arr):
     left, right = 0, len(arr) - 1
 

@@ -4,6 +4,10 @@
 Time complexity: O(N * L^2) for initialization, where N is the number of words and L is the maximum length of a word. This is because we iterate over each word, and for each character in a word, we could potentially be creating a new path in the Trie, which takes O(L) time. The f function has a time complexity of O(L), where L is the length of the prefix and suffix.
 Space complexity: O(N * L^2), where N is the number of words and L is the maximum length of a word. This is because we store all the words in a Trie, and the space complexity of a Trie is proportional to the sum of the lengths of the words it contains.
 """
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.index = -1
 
 class WordFilter:
     def __init__(self, words):

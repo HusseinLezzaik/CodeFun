@@ -3,6 +3,17 @@ class Node:
         self.data = data
         self.next = None
 
+"""
+# Time Complexity
+- push: O(1) because we just add a node at the beginning of the linked list.
+- pop: O(1) because we just remove a node from the beginning of the linked list.
+- peek: O(1) because we just return the value of the head node of the linked list.
+- is_empty: O(1) because we just check if the head of the linked list is None.
+
+# Space Complexity
+O(1) for each operation (push, pop, peek, is_empty) because we don't use any additional space that scales with the size of the input.
+"""
+
 class Stack:
     def __init__(self):
         self.head = None
@@ -28,15 +39,6 @@ class Stack:
 
     def is_empty(self):
         return self.head is None
-
-# Time Complexity
-## push: O(1) because we just add a node at the beginning of the linked list.
-## pop: O(1) because we just remove a node from the beginning of the linked list.
-## peek: O(1) because we just return the value of the head node of the linked list.
-## is_empty: O(1) because we just check if the head of the linked list is None.
-
-# Space Complexity
-## O(1) for each operation (push, pop, peek, is_empty) because we don't use any additional space that scales with the size of the input.
 
 # Let's test our Stack implementation
 stack = Stack()

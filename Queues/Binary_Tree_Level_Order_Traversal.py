@@ -1,6 +1,10 @@
 # Binary Tree Level Order Traversal: https://leetcode.com/problems/binary-tree-level-order-traversal/
 
-# Definition for a binary tree node.
+"""
+The time complexity is O(n), where n is the number of nodes in the tree. We visit each node once, and only once.
+The space complexity is O(m), where m is the maximum number of nodes in a level. In the worst case, the bottom level contains m/2 nodes, so the space complexity is O(m/2) = O(m).
+
+"""
 class TreeNode:
     def __init__(self, x):
         self.val = x

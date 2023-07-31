@@ -2,6 +2,16 @@
 
 from collections import deque
 
+"""
+# Time complexity:
+- push: O(n) because we dump all n elements from queue2 to queue1.
+- pop: O(1) because we just pop from the front of queue2.
+- peek: O(1) because we just return the first element of queue2.
+- is_empty: O(1) because we just check if queue2 is empty.
+
+# Space Complexity: O(n) because we use two queues to store n elements.
+"""
+
 class MyStack:
 
     def __init__(self):
@@ -22,14 +32,6 @@ class MyStack:
 
     def is_empty(self) -> bool:
         return not self.queue2
-
-# Time complexity:
-## push: O(n) because we dump all n elements from queue2 to queue1.
-## pop: O(1) because we just pop from the front of queue2.
-## peek: O(1) because we just return the first element of queue2.
-## is_empty: O(1) because we just check if queue2 is empty.
-
-# Space Complexity: O(n) because we use two queues to store n elements.
 
 # Initialize an object of MyStack class
 mystack = MyStack()

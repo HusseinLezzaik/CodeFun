@@ -291,6 +291,30 @@ class TreeNode:
         self.left = None
         self.right = None
 
+# Directed Graph
+class DirectedGraph:
+    def __init__(self):
+        self.graph = {}
+
+    def add_node(self, node):
+        if node not in self.graph:
+            self.graph[node] = []
+
+    def add_edge(self, from_node, to_node):
+        if from_node in self.graph:
+            self.graph[from_node].append(to_node)
+        else:
+            self.graph[from_node] = [to_node]
+
+G = DirectedGraph()
+
+G.add_node('A')
+G.add_edge('A', 'B')
+G.add_edge('A', 'C')
+G.add_edge('B', 'C')
+G.add_edge('C', 'A')
+
+print(G.graph) # {'A': ['B', 'C'], 'B': ['C'], 'C': ['A']}
 
 # Math
 x = float('-inf') # Negative infinity
@@ -300,10 +324,6 @@ x = 2 ** 3  # 2^3 = 8
 x = pow(2, 3)  # 2^3 = 8
 x % 2 == 0  # Check if x is even
 middle = (left + right) // 2
-
-# Sort
-array.sort()  # Sorts in ascending order
-array.sort(reverse=True)  # Sorts in descending order
 
 # For Loops
 for i in range(0, 10):
@@ -331,8 +351,30 @@ assert 1 == 1  # No output
 assert 1 == 2  # AssertionError
 assert stack.peek() == 'cherry'
 
+# Sort
+array.sort()  # Sorts in ascending order
+array.sort(reverse=True)  # Sorts in descending order
+sorted_array = sorted(array)  # Returns a sorted array
+sorted_array = sorted(array, reverse=True)  # Returns a sorted array in descending order
+array.sort(key=len)  # Sorts based on string length
+
 # Lambda Functions
-array.sort(key=lambda x: x[1])
+lambda arguments: expression
+
+add = lambda x, y: x + y
+print(add(5, 3)) # 8
+
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)  # Output: [2, 4, 6]
+
+numbers = [1, 2, 3, 4, 5, 6]
+squared = list(map(lambda x: x ** 2, numbers))
+print(squared)  # Output: [1, 4, 9, 16, 25, 36]
+
+array = [(1, 'b'), (2, 'a'), (3, 'c')] # Sort the array based on the second element of each tuple
+array.sort(key=lambda x: x[1]) # [('2', 'a'), ('1', 'b'), ('3', 'c')]
+
 people = [
     {"name": "Alice", "age": 30},
     {"name": "Bob", "age": 20},

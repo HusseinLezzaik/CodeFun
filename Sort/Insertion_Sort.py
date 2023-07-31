@@ -1,3 +1,4 @@
+# O(n^2) time | O(1) space
 def insertion_sort(arr):
     n = len(arr)
     for i in range(1, n):

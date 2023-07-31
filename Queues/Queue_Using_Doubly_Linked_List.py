@@ -4,6 +4,18 @@ class Node:
         self.prev = prev
         self.next = next
 
+"""
+The MyQueue class uses a doubly linked list to implement a queue. All the operations (push, pop, peek, and empty) have a time complexity of O(1). Here's why:
+- push: This operation just adds a new node to the front of the list, which involves a constant amount of work (creating a new node, updating the prev pointer of the old head, and updating the head pointer). So its time complexity is O(1).
+- pop: This operation removes the node at the tail of the list, which also involves a constant amount of work (saving the value to return, updating the tail pointer, and updating the next pointer of the new tail). So its time complexity is O(1).
+- peek: This operation just returns the value at the tail of the list, which is a constant time operation. So its time complexity is O(1).
+- empty: This operation just checks whether the head pointer is None, which is a constant time operation. So its time complexity is O(1).
+
+The space complexity of the MyQueue class is O(n), where n is the number of elements in the queue.
+This is because it uses a doubly linked list to store the elements of the queue.
+Each node in the list uses a constant amount of space, so the total space complexity is proportional to the number of elements in the queue.
+
+"""
 class MyQueue:
 
     def __init__(self):

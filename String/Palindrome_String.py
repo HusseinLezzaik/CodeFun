@@ -1,6 +1,6 @@
-```
+"""
 Check if a string is a Palindrome
-```
+"""
 
 # Solution 1 | O(n^2) time | O(n) space
 def isPalindrome(string):

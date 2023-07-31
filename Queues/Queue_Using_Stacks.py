@@ -1,5 +1,7 @@
 ## Implement Queue using Stacks: https://leetcode.com/problems/implement-queue-using-stacks/
 
+# O(1) time for push, O(1) amortized time for pop, O(1) time for peek, O(1) time for empty
+# O(n) space
 class MyQueue:
 
     def __init__(self):
