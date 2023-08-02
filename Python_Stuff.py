@@ -6,6 +6,7 @@
 4. Type Hints: The nums: List[int] -> int part is a type hint. nums: List[int] suggests that the nums parameter should be a list of integers, and -> int suggests that the function should return an integer. Type hints like these are optional in Python and are often used to make the code more readable and self-explanatory.
 5. Continue
 6. Operator Overloads
+7. Primitive Types: int, float, bool, str, None
 """
 
 # Bits
