@@ -401,3 +401,26 @@ class Person:
     def __pow__(self, other):
         return self.name * other
     
+# Positional and KeyWord Argumements
+"""
+1. Positional Arguments (*args): Positional arguments are passed in a specific order, and the order matters. 
+A tuple is an ordered collection, so it's a natural choice for capturing additional positional arguments. 
+When you use *args, all extra positional arguments are packed into a tuple, preserving their order.
+
+2. Keyword Arguments (**kwargs): Keyword arguments are passed by explicitly naming the parameter along with its value, like key=value. 
+Since dictionaries are collections of key-value pairs, they are a suitable choice for capturing extra keyword arguments.
+When you use **kwargs, all extra keyword arguments are packed into a dictionary, with the parameter names as keys and the corresponding values as values.
+"""
+def example_function(a, b, *args, **kwargs):
+    print("a:", a)
+    print("b:", b)
+    print("args:", args)   # Prints extra positional arguments
+    print("kwargs:", kwargs) # Prints extra keyword arguments
+
+# Calling the function with extra positional and keyword arguments
+example_function(1, 2, 3, 4, 5, extra_param1="value1", extra_param2="value2")
+# Output
+       # a: 1
+       # b: 2
+       # args: (3, 4, 5)
+       # kwargs: {'extra_param1': 'value1', 'extra_param2': 'value2'}
