@@ -331,6 +331,11 @@ x = pow(2, 3)  # 2^3 = 8
 x % 2 == 0  # Check if x is even
 middle = (left + right) // 2
 
+# Padding
+number = 5.1234
+formatted_number = "%08.3f" % number # 8 characters long include decimal point '.', 3 decimals
+print(formatted_number)  # Output: "0005.123
+
 # For Loops
 for i in range(0, 10):
     print(i)
