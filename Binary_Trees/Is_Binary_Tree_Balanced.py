@@ -9,7 +9,14 @@ class TreeNode:
         self.val = x
         self.left = None
         self.right = None
+"""
+1. if empty, return 0
+2. compute the left and right most heights
+3. when done, check if the left and right subtrees are balanced - if not return -1
+4. if balanced, return the height of the tree
+"""
 
+# Recursive Algorithm
 def height(node):
     if not node:
         return 0
