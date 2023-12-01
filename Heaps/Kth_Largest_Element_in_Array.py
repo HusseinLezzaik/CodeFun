@@ -1,6 +1,7 @@
 """
 leetcode: https://leetcode.com/problems/kth-largest-element-in-an-array/
 
+here we use quickslct to find the kth largest element in an array which is O(n) on average, and similar to quicksort (**)
 """
 
 # Solution: Sorting
@@ -15,7 +16,7 @@ class Solution1:
         return nums[len(nums) - k]
 
 
-# Solution: QuickSelect
+# Solution: QuickSelect (**)
 # Time Complexity:
 #   - Best Case: O(n)
 #   - Average Case: O(n)

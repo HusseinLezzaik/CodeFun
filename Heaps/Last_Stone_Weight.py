@@ -1,6 +1,11 @@
 """
 leetcode: https://leetcode.com/problems/last-stone-weight/
 
+time complexity: O(nlogn)
+
+Heapifying the stones: heapq.heapify(stones) has a time complexity of O(n), where n is the number of stones.
+Main loop: The while loop runs as long as there are more than one stone in the heap. In each iteration, two stones are popped from the heap, and possibly one new stone is pushed back. Popping from a heap (heapq.heappop) is O(log n) operation, and pushing onto a heap (heapq.heappush) is also O(log n). In the worst case, this loop runs for n-1 iterations (as each iteration effectively removes one stone from consideration).
+Thus, each iteration has a time complexity of O(log n), and there are up to n-1 iterations, resulting in a total time complexity of O(n log n).
 """
 
 class Solution:
