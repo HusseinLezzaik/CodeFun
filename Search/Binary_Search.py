@@ -1,4 +1,9 @@
 # Leetcode Problem 704
+"""
+questions around binary search often involve implementing this algorithm with a few math tricks in the problem of how to setup the search problem.
+for example looking at leftmost or rightmost index of a target value in a sorted array. pretty easy and fun questions.
+"""
+
 
 # Iterative Solution: O(logn) time | O(1) space
 def binarySearch(array, target):

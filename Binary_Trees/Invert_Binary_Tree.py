@@ -2,6 +2,16 @@
 Invert Binary Tree 
 
 LeetCode: https://leetcode.com/problems/invert-binary-tree/
+
+the trick with binary trees questions usually involves recursion, going bottom up instead of top down to save (O(n)) in complexity.
+also more tricks involves computing heights, diameters and keeping track of them to use this meta data.
+
+also you can use BFS or DFS to solve binary tree questions.
+
+intuitively, you can see that DFS is a very efficient and easy to implement recursive algorithm - and many tree problems can be easily solved via recursion of patterns.
+and so the solution ends up at the intersection of using DFS and recursion.
+
+also some questions have binary search tree inputs, which opens up the tricks of binary search algorithms (makes time complexity o(logn)).
 """
 class BinaryTree:
     def __init__(self, value):
