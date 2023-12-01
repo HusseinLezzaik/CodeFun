@@ -232,6 +232,8 @@ import heapq # Min Heap, add -ve sign to make it a Max Heap
 heap = []
 heapq.heapify(heap)
 heapq.heappush(heap, 'element') # ensures that the smallest element is always at the front
+heapq.heappop(heap) # Remove and return the smallest element
+heapq._heapify_max(stones) # There's a private _heapify_max method, Transform list into a maxheap, in-place, in O(len(x)) time: https://github.com/python/cpython/blob/1170d5a292b46f754cd29c245a040f1602f70301/Lib/heapq.py#L198
 smallest_element = heapq.heappop(heap) # Remove and return the smallest element
 heappushpop_element = heapq.heappushpop(heap, 'element') # Push element on the heap, then pop and return the smallest element
 heapreplace_element = heapq.heapreplace(heap, 'element') # Pop and return the smallest element, then push element

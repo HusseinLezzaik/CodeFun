@@ -1,5 +1,7 @@
 # Course Schedule II: https://leetcode.com/problems/course-schedule-ii/
 """
+the main element of this question is that it teaches how to do topological sort using DFS.
+
 Time complexity: O(N + P), where N is the number of courses and P is the number of prerequisites. This is because we need to visit each course and each prerequisite once.
 Space complexity: O(N + P), due to the space needed to store the course dictionary, the checked list, the path list, and the result list.
 """

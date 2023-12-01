@@ -1,4 +1,9 @@
 # Network Delay Time: https://leetcode.com/problems/network-delay-time/
+"""
+the main lesson from this question is to practice using Dijkstra's algorithm to find the shortest path.
+
+"""
+
 
 import collections
 import heapq

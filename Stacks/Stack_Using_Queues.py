@@ -1,4 +1,12 @@
 # Implement Stack Using Queues: https://leetcode.com/problems/implement-stack-using-queues/
+"""
+the main trick with stacks is that usually we're conducting certain operations, and we need a temporary array 
+that we can refer to, and many times we end up using a stack for that.
+
+questions are pretty easy and fun, whenever you're thinking how do i setup this problem and keep track of things, think of how to use a stack to make your life easier!
+"""
+
+
 
 from collections import deque
 
